@@ -2,12 +2,12 @@
 {
     class Empresa: Administracao
     {
-        public void Cadastrar()
+        public override void Cadastrar()
         {
 
         }
 
-        public void Remover()
+        public override void Remover()
         {
 
         }

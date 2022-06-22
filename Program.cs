@@ -7,13 +7,13 @@
            Curso DH_CSHARP= new();
           
 
-            Console.Write("-[ Inserindo novos alunos ");
-            DH_CSHARP.CadastrarAluno(1,"Maria","Jose","555999");
-            DH_CSHARP.CadastrarAluno(2,"Jose","Maria","666888");
-            DH_CSHARP.CadastrarAluno(3, "Joaquim", "Couves", "777555");
-            DH_CSHARP.CadastrarAluno(4, "Pablo", "Picasso", "888444");
-            DH_CSHARP.CadastrarAluno(5, "Hugo", "Sanchez", "999333");
-            Console.WriteLine("]-");
+            Console.WriteLine("Alunos matriculados: ");    //add nomes diferentes
+            DH_CSHARP.CadastrarAluno(1,"Pedro","Pedra","781243");
+            DH_CSHARP.CadastrarAluno(2,"Aderbal","Silva","999471");
+            DH_CSHARP.CadastrarAluno(3, "Marina", "Peixes", "551231");
+            DH_CSHARP.CadastrarAluno(4, "Adelaide", "Chavez", "112531");
+            DH_CSHARP.CadastrarAluno(5, "Juliano", "Santos", "771122");
+            
 
         }
     }

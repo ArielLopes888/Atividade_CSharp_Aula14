@@ -2,15 +2,15 @@
 {
     class Funcionario
     {
-        string Nome;
-        string Sobrenome;
-        string Telefone;
+        string Nome = "";
+        string Sobrenome = "";
+        string Telefone = "";
         double Salario;
-        string CPF;
+        string CPF = "";
 
         public bool Estagio_Funcionário()
         {
-           bool status = "Ativo";
+           bool status = true;
            return status;
         }
     }

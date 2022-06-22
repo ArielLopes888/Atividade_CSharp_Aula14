@@ -2,16 +2,16 @@
 {
     abstract class Administracao
     {
-        abstract void Cadastrar();
+        public abstract void Cadastrar();
         
-        abstract void Remover();
+       public abstract void Remover();
 
-        virtual void Atualizar()
+        public virtual void Atualizar()
         {
 
         }
 
-        virtual void ApresentarTodos()
+        public virtual void ApresentarTodos()
         {
 
         }
