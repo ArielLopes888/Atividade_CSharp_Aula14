@@ -2,42 +2,35 @@
 {
     class Curso : Administracao
     {
-        Dictionary<int, Aluno> Cadastrados = new Dictionary<int, Aluno>();
+        Dictionary<int, dynamic> alunosCurso = new Dictionary<int, dynamic>();
 
         public override void Cadastrar()
         {
-            throw new NotImplementedException(); //só resolve o erro se implementar o metodo assim, porem da conflito
-                                                 //com a forma que colocamos o cadastro dos alunos em Program.cs 
+            alunosCurso.Add(1, "fulano 1");
+            alunosCurso.Add(2, "fulano 2");   //aqui diz o nome dos alunos no value, acrescentando eles para o dictionary
+            alunosCurso.Add(3, "fulano 3");
         }
-        public bool CadastrarAluno(int NumeroMatricula, string? Nome, string? Sobrenome, string Telefone)
-        {
-            Aluno NossoAluno = new Aluno();
-            NossoAluno.Matricula = NumeroMatricula;
-            NossoAluno.Nome = Nome;
-            NossoAluno.Sobrenome = Sobrenome;
-            NossoAluno.Telefone = Telefone;
-
-            Cadastrados.TryAdd(NumeroMatricula, NossoAluno);
-
-            return true;
-        }
+        
 
         public override void Remover()
         {
-       //     Cadastrados.Remove(NossoAluno);
+            alunosCurso.Remove(0);   //remove os alunos pelo num da matricula (key)
         }
 
         public override void Atualizar()
        {
-       //    Aluno[1] = (6, "Creuza", "Batatas", "00000");
+            if (alunosCurso.ContainsKey(2))     //pra checar se a matricula existe
+            {
+                alunosCurso[2] = "novofulano";      //dar novo valor a key/matricula
+            }
 
         }
 
         public override void ApresentarTodos()
         {
-            foreach (var item in Cadastrados)
+            for (int i = 0; i < alunosCurso.Count; i++)
             {
-                Console.WriteLine($"{item.Key} - {item.Value.Nome} {item.Value.Sobrenome}");
+                Console.WriteLine("Matricula: {0}, Nome: {1}", alunosCurso.ElementAt(i).Key, alunosCurso.ElementAt(i).Value);
             }
         }
     }
